@@ -62,14 +62,6 @@ module.exports = function(Canvas){
   var grid = require('./grid');
   var Detector = require('./detector');
 
-  // TODO: remove this. should avoid extending built in types
-  Array.prototype.remove = function(from, to) {
-    var rest = this.slice((to || from) + 1 || this.length);
-    this.length = from < 0 ? this.length + from : from;
-    return this.push.apply(this, rest);
-  };
-
-
   qrcode.imagedata = null;
   qrcode.width = 0;
   qrcode.height = 0;
